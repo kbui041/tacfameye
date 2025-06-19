@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import '../index.css';
 import { NavLink } from 'react-router-dom';
+import '../index.css';
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -10,20 +10,20 @@ function Header() {
   return (
     <header className="header">
       <div className="logo-and-toggle">
-        <a href = "./pages/home"><img src="/logo.png" alt="Tacoma Family Eyecare Logo" className="logo" /></a>
-        <button className="hamburger" onClick={toggleMenu}>
+         <img src="/logo.png" alt="Tacoma Family Eyecare Logo" className="logo" />
+        <button className="hamburger" onClick={toggleMenu} aria-label="Toggle navigation">
           ☰
         </button>
       </div>
 
       <nav className={`nav-links ${menuOpen ? 'open' : ''}`}>
-        <NavLink to="/" end>Home</NavLink>
-        <NavLink to="/team">Our Team</NavLink>
-        <NavLink to="/services">Services</NavLink>
-        <NavLink to="/insurance">Insurance</NavLink>
-        <NavLink to="/eyelib">Eye Library</NavLink>
-        <NavLink to="/location">Location & Hours</NavLink>
-        <NavLink to="/hipaa">HIPAA</NavLink>
+        <NavLink to="/" end onClick={() => setMenuOpen(false)}>Home</NavLink>
+        <NavLink to="/team" onClick={() => setMenuOpen(false)}>Our Team</NavLink>
+        <NavLink to="/services" onClick={() => setMenuOpen(false)}>Services</NavLink>
+        <NavLink to="/insurance" onClick={() => setMenuOpen(false)}>Insurance</NavLink>
+        <NavLink to="/eyelib" onClick={() => setMenuOpen(false)}>Eye Library</NavLink>
+        <NavLink to="/location" onClick={() => setMenuOpen(false)}>Location & Hours</NavLink>
+        <NavLink to="/hipaa" onClick={() => setMenuOpen(false)}>HIPAA</NavLink>
       </nav>
     </header>
   );

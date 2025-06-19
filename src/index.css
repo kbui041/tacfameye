@@ -1,3 +1,8 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* ========== HEADER STYLES ========== */
 .header {
   background-color: #e8f0f0;
   padding: 1rem;
@@ -31,6 +36,11 @@
   flex-direction: column;
   gap: 0.75rem;
   margin-top: 1rem;
+  text-align: center;
+}
+
+.nav-links.open {
+  display: flex;
 }
 
 .nav-links a {
@@ -49,19 +59,9 @@
   left: 0;
   height: 2px;
   width: 0;
-  background-color: #006699;
+  background-color: transparent;
   transition: width 0.3s ease;
 }
-
-.nav-links a:hover::after {
-  width: 100%;
-}
-
-.nav-links a.active::after {
-  width: 100%;
-}
-
-
 
 @media (min-width: 768px) {
   .hamburger {
@@ -76,13 +76,24 @@
   }
 
   .nav-links {
-    display: flex !important;
+    display: flex;
     flex-direction: row;
     gap: 1.5rem;
     margin-top: 0;
+    text-align: left;
+  }
+
+  .nav-links a::after {
+    background-color: #006699;
+  }
+
+  .nav-links a:hover::after,
+  .nav-links a.active::after {
+    width: 100%;
   }
 }
 
+/* ========== APP LAYOUT ========== */
 .app-container {
   display: flex;
   flex-direction: column;
@@ -93,15 +104,324 @@
   flex: 1;
 }
 
+/* ========== FOOTER STYLES ========== */
 .footer {
   background-color: #e8f0f0;
   text-align: center;
   padding: 1rem;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #333;
   border-top: 1px solid #ccc;
 }
 
-.footer p {
-  font-size:1.1rem;
+.footer-contact {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.footer-location {
+  justify-content: space-evenly;
+  margin-top: 0.5rem;
+}
+
+.footer-bottom p {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+}
+
+/* ========== INSURANCE PAGE ========== */
+.Insurance {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #fefefe;
+  color: #002244;
+  font-family: 'Helvetica Neue', sans-serif;
+  line-height: 1.75;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.Insurance h1 {
+  font-size: 2.25rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
+  color: #001933;
+  border-bottom: 2px solid #cde;
+  padding-bottom: 0.5rem;
+}
+
+.Insurance h2,
+.Insurance h3 {
+  font-size: 1.4rem;
+  color: #004477;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  border-left: 4px solid #006699;
+  padding-left: 0.5rem;
+}
+
+.Insurance p {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+.Insurance ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+
+.Insurance li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+.Insurance li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #0077aa;
+  font-size: 0.95rem;
+  top: 0.15rem;
+}
+
+.Insurance strong {
+  color: #003366;
+  font-weight: 600;
+}
+
+.Insurance em {
+  color: #666;
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+/* ========== SERVICES PAGE ========== */
+.Services {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #fdfdfd;
+  color: #002244;
+  font-family: 'Helvetica Neue', sans-serif;
+  line-height: 1.75;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.Services h1 {
+  font-size: 2.25rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #001933;
+  border-bottom: 2px solid #cde;
+  padding-bottom: 0.5rem;
+}
+
+.Services h2 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #004477;
+  border-left: 4px solid #0077aa;
+  padding-left: 0.75rem;
+}
+
+.Services p {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+.Services ul {
+  list-style: disc;
+  padding-left: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.Services li {
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+.Services ul ul {
+  list-style: circle;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+/* ========== EYELIB PAGE ========== */
+.EyeLib {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fdfdfd;
+  color: #002244;
+  font-family: 'Helvetica Neue', sans-serif;
+  line-height: 1.7;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.EyeLib h1 {
+  font-size: 2.25rem;
+  margin-bottom: 1.25rem;
+  color: #001933;
+  border-bottom: 2px solid #cde;
+  padding-bottom: 0.5rem;
+}
+
+.EyeLib p {
+  font-size: 1.05rem;
+  margin-bottom: 1.25rem;
+}
+
+.EyeLib a {
+  color: #006699;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.EyeLib a:hover {
+  color: #004477;
+}
+
+/* ========== MOBILE (<=600px) ADJUSTMENTS ========== */
+@media (max-width: 600px) {
+  .Insurance {
+    padding: 1rem;
+  }
+
+  .Insurance h1 {
+    font-size: 1.75rem;
+  }
+
+  .Insurance h2,
+  .Insurance h3 {
+    font-size: 1.2rem;
+  }
+
+  .Insurance p,
+  .Insurance li {
+    font-size: 1rem;
+  }
+
+  .Services {
+    padding: 1.25rem;
+  }
+
+  .Services h1 {
+    font-size: 1.75rem;
+  }
+
+  .Services h2 {
+    font-size: 1.25rem;
+  }
+
+  .Services p,
+  .Services li {
+    font-size: 1rem;
+  }
+
+  .EyeLib {
+    padding: 1.25rem;
+  }
+
+  .EyeLib h1 {
+    font-size: 1.75rem;
+  }
+
+  .EyeLib p {
+    font-size: 1rem;
+  }
+
+  .footer {
+    font-size: 0.75rem;
+    padding: 0.5rem;
+    line-height: 1.3;
+  }
+
+  .footer-contact {
+    flex-direction: column;
+    gap: 0.25rem;
+    text-align: center;
+  }
+
+  .footer-location {
+    font-size: 0.75rem;
+    padding: 0 0.5rem;
+    text-align: center;
+  }
+
+  .footer-bottom p {
+    font-size: 0.7rem;
+    margin-top: 0.75rem;
+  }
+}
+
+/* HIPAA PAGE */
+.hipaa-page {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #fdfdfd;
+  color: #002244;
+  font-family: 'Helvetica Neue', sans-serif;
+  line-height: 1.75;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.hipaa-page h1 {
+  font-size: 2.25rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
+  color: #001933;
+  border-bottom: 2px solid #cde;
+  padding-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.hipaa-page p {
+  font-size: 1.05rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.pdf-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.hipaa-pdf {
+  width: 100%;
+  max-width: 600px;
+  height: 450px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .hipaa-page {
+    padding: 1.25rem;
+  }
+
+  .hipaa-page h1 {
+    font-size: 1.75rem;
+  }
+
+  .hipaa-page p {
+    font-size: 1rem;
+  }
+
+  .hipaa-pdf {
+    height: 300px;
+  }
 }
