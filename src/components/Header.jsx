@@ -19,7 +19,7 @@ function Header() {
 
       <nav className={`nav-links ${menuOpen ? 'open' : ''}`}>
         <NavLink to="/" end onClick={() => setMenuOpen(false)}>Home</NavLink>
-        <NavLink to="/team" onClick={() => setMenuOpen(false)}>Our Team</NavLink>
+        <NavLink to="/team" onClick={() => setMenuOpen(false)}>Team</NavLink>
         <NavLink to="/services" onClick={() => setMenuOpen(false)}>Services</NavLink>
         <NavLink to="/insurance" onClick={() => setMenuOpen(false)}>Insurance</NavLink>
         <NavLink to="/eyelib" onClick={() => setMenuOpen(false)}>Eye Library</NavLink>
