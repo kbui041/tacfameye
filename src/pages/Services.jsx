@@ -21,11 +21,12 @@ function Services() {
           <li>Visual fields</li>
           <li>Vision testing (myopia, hyperopia, astigmatism, presbyopia)</li>
           <li>
-            Eye health evaluation (external and internal), including screening for:
+            Eye health evaluation (external and internal), including screening for eye disease like:
             <ul>
               <li>Cataracts</li>
               <li>Glaucoma</li>
               <li>Macular degeneration</li>
+              <li>Etc.</li>
             </ul>
           </li>
         </ul>
