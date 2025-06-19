@@ -5,7 +5,7 @@ export default function Location() {
   return (
     <div className="location-page">
       {/* Centered Page Title */}
-      <h1 className="location-heading">Tacoma Family Eyecare</h1>
+      <h1 className="location-heading">Location & Hours</h1>
 
       <div className="location-top">
         {/* Left: Contact Info & Hours */}
