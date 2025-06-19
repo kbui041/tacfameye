@@ -4,13 +4,14 @@ import '../index.css';
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
     <header className="header">
       <div className="logo-and-toggle">
-         <img src="/logo.png" alt="Tacoma Family Eyecare Logo" className="logo" />
+        <NavLink to="/" onClick={() => setMenuOpen(false)}>
+          <img src="/logo.png" alt="Tacoma Family Eyecare Logo" className="logo" />
+        </NavLink>
         <button className="hamburger" onClick={toggleMenu} aria-label="Toggle navigation">
           ☰
         </button>

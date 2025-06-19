@@ -4,10 +4,12 @@ import '../index.css';
 export default function Location() {
   return (
     <div className="location-page">
+      {/* Centered Page Title */}
+      <h1 className="location-heading">Tacoma Family Eyecare</h1>
+
       <div className="location-top">
         {/* Left: Contact Info & Hours */}
         <div className="location-info">
-          <h2>Tacoma Family Eyecare</h2>
           <p>2219 South 37th Street<br />Tacoma, WA 98409</p>
           <p>
             <strong>P:</strong> (253) 671 – 6012<br />
